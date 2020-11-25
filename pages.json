@@ -36,15 +36,7 @@
             }
             
         }
-        ,{
-            "path" : "subpkg/goods_detail/goods_detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+       
     ],
     
       "tabBar": {
@@ -95,6 +87,14 @@
                     "style" :                                                                                    
                 {
                 
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "search/search",
+                    "style" :                                                                                    
+                {
                     "enablePullDownRefresh": false
                 }
                 

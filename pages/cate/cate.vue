@@ -1,5 +1,7 @@
 <template>
   <view>
+    <view class="search-box"><my-search @click='gotoSearch'></my-search></view>
+    
     <view class="scroll-view-container">
       <!-- 左侧的滚动视图区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px'}">
@@ -34,7 +36,9 @@
 </template>
 
 <script>
+  import uniIcons from "@/components/uni-icons/uni-icons.vue"
 	export default {
+    components: {uniIcons},
 		data() {
 			return {
         scrollTop:0,
@@ -47,11 +51,16 @@
 		},
 onLoad(){
     const info= uni.getSystemInfoSync()
-    this.wh=info.windowHeight,
+    this.wh=info.windowHeight-50,
     // 调用获取分类列表数据的方法
       this.getCateList()
     },
     methods:{
+      gotoSearch() {
+           uni.navigateTo({
+             url: '/subpkg/search/search'
+           })
+         },
       gotoGoodsList(item3){
         uni.navigateTo({
           url:'/subpkg/goods_list/goods_list?cid=' + item3.cat_id
@@ -67,7 +76,6 @@ onLoad(){
           // 发起请求
           const { data: res } = await uni.$http.get('/api/public/v1/categories')
           // 判断是否获取失败
-          console.log(res.message)
           if (res.meta.status !== 200) return uni.$showMsg()
           // 转存数据
           this.cateList = res.message
@@ -139,5 +147,13 @@ onLoad(){
       }
     }
   }
+}
+.search-box {
+  // 设置定位效果为“吸顶”
+  position: sticky;
+  // 吸顶的“位置”
+  top: 0;
+  // 提高层级，防止被轮播图覆盖
+  z-index: 999;
 }
 </style>
