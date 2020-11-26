@@ -28,6 +28,7 @@
 </template>
 
 <script>
+  
   import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 	export default {
     components: {uniSearchBar},

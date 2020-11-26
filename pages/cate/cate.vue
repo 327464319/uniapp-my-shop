@@ -37,7 +37,9 @@
 
 <script>
   import uniIcons from "@/components/uni-icons/uni-icons.vue"
+  import badgeMix from '@/mixin/tabbar-badge.js' 
 	export default {
+    mixins:[badgeMix],
     components: {uniIcons},
 		data() {
 			return {
