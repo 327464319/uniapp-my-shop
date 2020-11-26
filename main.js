@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import App from './App'
 import { $http } from '@escook/request-miniprogram'
+import uniIcons from "@/components/uni-icons/uni-icons.vue"
+Vue.component('uniIcons',uniIcons)
+
+
 
 uni.$http = $http
 // 配置请求根路径
@@ -33,6 +37,7 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 
 const app = new Vue({
+ 
     ...App
 })
 app.$mount()
