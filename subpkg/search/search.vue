@@ -29,9 +29,9 @@
 
 <script>
   
-  import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
+  // import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 	export default {
-    components: {uniSearchBar},
+    // components: {uniSearchBar},
 		data() {
 			return {
          // 延时器的 timerId

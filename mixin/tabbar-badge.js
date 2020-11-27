@@ -8,6 +8,12 @@ export default {
        
         this.setBadge()
       },
+      watch:{
+        total:function(){
+           this.setBadge()
+        }
+      },
+      
        methods: {
           setBadge() {
             // 调用 uni.setTabBarBadge() 方法，为购物车设置右上角的徽标
@@ -17,4 +23,5 @@ export default {
             })
           },
         },
+        
 }
