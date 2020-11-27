@@ -26,7 +26,7 @@
     <!-- 底部的边框线 -->
     <image src="/static/cart_border@2x.png" class="address-border"></image>
     <view class="myModel" v-if="myModelShow">
-      <text class="modelText">检测到您没打开地址权限，是否去设置打开？'</text>
+      <text class="modelText">检测到您没打开地址权限，是否去设置打开?</text>
      <view class="modelButton">
        <button @click="myModelNoShow" size='mini'>否</button>
        <button open-type="openSetting" @opensetting="settingCallback" size="mini">打开设置页</button>
