@@ -16,7 +16,7 @@ namespaced: true,
       // 循环更新购物车中每件商品的勾选状态
       state.cart.forEach(x => x.goods_state = newState)
       // 持久化存储到本地
-      this.commit('m_cart/saveToStorage')
+      this.commit('my_cart/saveToStorage')
     },
     removeGoodsById(state, goods_id) {
       // 调用数组的 filter 方法进行过滤

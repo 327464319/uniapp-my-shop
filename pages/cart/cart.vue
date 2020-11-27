@@ -49,7 +49,7 @@
       ...mapMutations('my_cart', ['updateGoodsState', 'updateGoodsCount','removeGoodsById']),
       // 点击了滑动操作按钮
       swipeActionClickHandler(goods) {
-        console.log(goods)
+        this.removeGoodsById(goods.goods_id)
       },
       radioChangeHandler(e) {
           // console.log(e) // 输出得到的数据 -> {goods_id: 395, goods_state: false}
